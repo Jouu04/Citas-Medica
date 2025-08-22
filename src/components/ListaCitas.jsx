@@ -7,7 +7,7 @@ export default function ListaCitas({ citas, cancelarCita, editarCita }) {
   const [filtro, setFiltro] = useState("Todos");
   const [busqueda, setBusqueda] = useState("");
 
-  // 👇 para el modal de confirmación
+  // para el modal de confirmación
   const [showModal, setShowModal] = useState(false);
   const [citaSeleccionada, setCitaSeleccionada] = useState(null);
 
@@ -27,7 +27,7 @@ export default function ListaCitas({ citas, cancelarCita, editarCita }) {
   const confirmadas = citas.filter(c => c.estado === "Confirmada").length;
   const canceladas = citas.filter(c => c.estado === "Cancelada").length;
 
-  // 📄 Exportar a PDF
+  //  exportar a PDF
   const exportarPDF = () => {
     const doc = new jsPDF();
     doc.text("Listado de Citas Médicas", 14, 15);
@@ -46,7 +46,7 @@ export default function ListaCitas({ citas, cancelarCita, editarCita }) {
     doc.save("citas_medicas.pdf");
   };
 
-  // 🧩 LÓGICA DEL MODAL
+  // logica del modal
   const handleShowModal = (cita) => {
     setCitaSeleccionada(cita);
     setShowModal(true);
@@ -71,7 +71,7 @@ export default function ListaCitas({ citas, cancelarCita, editarCita }) {
         </Col>
         <Col className="text-end">
           <Button variant="success" onClick={exportarPDF}>
-            📄 Exportar PDF
+            Exportar PDF
           </Button>
         </Col>
       </Row>

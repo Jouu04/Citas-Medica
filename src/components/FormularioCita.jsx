@@ -11,7 +11,7 @@ export default function FormularioCita({ agregarCita, citaEditar, guardarCitaEdi
 
   const [showModal, setShowModal] = useState(false);
 
-  // Si hay cita para editar, cargamos sus datos
+  // si hay cita para editar cargamos sus datos
   useEffect(() => {
     if (citaEditar) {
       setForm(citaEditar);
@@ -28,7 +28,7 @@ export default function FormularioCita({ agregarCita, citaEditar, guardarCitaEdi
       return alert("Todos los campos son obligatorios");
     }
 
-    // Si es edición, mostramos modal en lugar de guardar directo
+    // si es edición mostramos modal en lugar de guardar directo
     if (citaEditar) {
       setShowModal(true);
     } else {
@@ -47,7 +47,7 @@ export default function FormularioCita({ agregarCita, citaEditar, guardarCitaEdi
     <>
       <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3">
-          <Form.Label>Nombre del Paciente</Form.Label>
+          <Form.Label>Nombre del paciente</Form.Label>
           <Form.Control 
             type="text" 
             name="nombrePaciente" 

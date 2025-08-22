@@ -10,7 +10,7 @@ function App() {
   const [citas, setCitas] = useState([]);
   const [citaEditar, setCitaEditar] = useState(null);
 
-  // Cargar citas desde localStorage o json inicial
+  // cargar citas desde localStorage o json inicial
   useEffect(() => {
     const citasGuardadas = localStorage.getItem("citas");
     if (citasGuardadas) {
@@ -20,14 +20,14 @@ function App() {
     }
   }, []);
 
-  // Guardar citas en localStorage cada vez que cambien
+  // guardar citas en localStorage cada vez que cambien
   useEffect(() => {
     if (citas.length > 0) {
       localStorage.setItem("citas", JSON.stringify(citas));
     }
   }, [citas]);
 
-  // Agregar nueva cita
+  // agregar nueva cita
   const agregarCita = cita => {
     const nuevaCita = {
       ...cita,
@@ -38,20 +38,20 @@ function App() {
     setVista("lista");
   };
 
-  // Cancelar cita
+  // cancelar cita
   const cancelarCita = id => {
     setCitas(citas.map(c =>
       c.id === id ? { ...c, estado: "Cancelada" } : c
     ));
   };
 
-  // Editar cita
+  // editar cita
   const editarCita = cita => {
     setCitaEditar(cita);
     setVista("formulario");
   };
 
-  // Guardar cita editada
+  // guardar cita editada
   const guardarCitaEditada = citaActualizada => {
     setCitas(citas.map(c =>
       c.id === citaActualizada.id ? citaActualizada : c

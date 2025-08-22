@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import 'bootstrap/dist/css/bootstrap.min.css'; // Importamos Bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css'; // importamos Bootstrap
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
