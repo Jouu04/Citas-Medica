@@ -1,0 +1,32 @@
+{
+  "pacientes": [
+    {
+      "id": 1,
+      "nombrePaciente": "Juan Pérez",
+      "fecha": "2025-08-23T10:30:00",
+      "especialidad": "Cardiología",
+      "estado": "Pendiente"
+    },
+    {
+      "id": 2,
+      "nombrePaciente": "María López",
+      "fecha": "2025-08-24T14:00:00",
+      "especialidad": "Pediatría",
+      "estado": "Confirmada"
+    },
+    {
+      "id": 3,
+      "nombrePaciente": "Carlos Ramírez",
+      "fecha": "2025-08-21T09:00:00",
+      "especialidad": "Dermatología",
+      "estado": "Cancelada"
+    },
+    {
+      "id": 4,
+      "nombrePaciente": "Ana Torres",
+      "fecha": "2025-08-25T16:15:00",
+      "especialidad": "Oftalmología",
+      "estado": "Pendiente"
+    }
+  ]
+}
